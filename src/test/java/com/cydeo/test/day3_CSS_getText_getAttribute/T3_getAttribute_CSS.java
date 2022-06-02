@@ -29,6 +29,18 @@ public class T3_getAttribute_CSS {
         //  Expected: Log In
         WebElement loginButton = driver.findElement(By.cssSelector("input[type='submit']"));
 
+        String expectedBtnText = "Log In";
+        String actualBtnText = loginButton.getAttribute("value");
+        System.out.println("actualBtnText = " + actualBtnText);
+
+        if (actualBtnText.equals(expectedBtnText)){
+            System.out.println("Log in button verification passed");
+            }else{
+            System.out.println("Login button verification failed");
+        }
+
+        driver.quit();
+
 
     }
 }

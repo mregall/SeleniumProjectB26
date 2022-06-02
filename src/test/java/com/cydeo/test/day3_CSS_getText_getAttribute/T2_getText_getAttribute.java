@@ -1,5 +1,6 @@
 package com.cydeo.test.day3_CSS_getText_getAttribute;
 
+import com.cydeo.test.utilities.WebDriverFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -21,8 +22,11 @@ public class T2_getText_getAttribute {
         */
 
         // 1- Open a Chrome browser
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+        /*WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();*/
+
+        WebDriver driver = WebDriverFactory.getDriver("firefox");
+
         driver.manage().window().maximize();
 
         //2- Go to: https://practice.cydeo.com/registration_form
@@ -62,6 +66,8 @@ public class T2_getText_getAttribute {
         }else{
             System.out.println("Placeholder text verification failed!");
         }
+
+        driver.quit();
 
 
 
