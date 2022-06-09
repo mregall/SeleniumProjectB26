@@ -49,6 +49,8 @@ public class T1_Locators_getText {
         }else{
             System.out.println("Error message verification failed!");
         }
+        driver.findElement(By.className("xbx"));
+
 
         driver.quit();
 
