@@ -5,6 +5,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+
 public class IFramePractice extends TestBase {
 
     @Test
@@ -21,12 +24,23 @@ public class IFramePractice extends TestBase {
         commentBody.clear();
 
         //4- Type "Hello World" in comment body
+        commentBody.sendKeys("Hello World");
 
         //5- Verify "Hello World" text is written in comment body
+        assertEquals(commentBody.getText(), "Hello World");
+
+        //now we have to switch out of iframe
+        driver.switchTo().parentFrame();
 
         //6- Verify header "An iFrame containing the TinyMCE
         //WYSIWYG Editor" is displayed
+        WebElement headerText = driver.findElement(By.tagName("h3"));
+        assertTrue(headerText.isDisplayed(), "Header text did not appear");
 
+        String actualHeader = headerText.getText();
+        String expectedHeader = "An iFrame containing the TinyMCE WYSIWYG Editor";
+
+        assertEquals(actualHeader, expectedHeader, "Header text did not appear correctly");
 
     }
 }
