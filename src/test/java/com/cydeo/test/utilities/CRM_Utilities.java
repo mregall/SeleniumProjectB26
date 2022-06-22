@@ -10,7 +10,7 @@ public class CRM_Utilities {
 //   Name: login_crm()
 //   Return type: void
 //   Arg1: WebDriver
-    public static void crm_login(WebDriver driver){
+    public static void crm_login(WebDriver driver) {
 
         WebElement username = driver.findElement(By.xpath("//input[@name='USER_LOGIN']"));
         username.sendKeys("helpdesk1@cybertekschool.com");
@@ -30,7 +30,7 @@ public class CRM_Utilities {
 //    Arg2: String username
 //    Arg3: String password
 
-    public static void crm_login(WebDriver driver,String username,String password){
+    public static void crm_login(WebDriver driver, String username, String password) {
 
         WebElement inputUsername = driver.findElement(By.xpath("//input[@name='USER_LOGIN']"));
         inputUsername.sendKeys(username);
