@@ -27,7 +27,7 @@ public class T1_FacebookTitleVerification {
             System.out.println("Facebook title verification is failed!");
         }
 
-        driver.quit();
+       // driver.quit();
 
     }
 }
