@@ -38,6 +38,6 @@ public class T3_GoogleSearch {
             System.out.println("Title verification failed!");
         }
 
-        driver.quit();
+        //driver.quit();
     }
 }

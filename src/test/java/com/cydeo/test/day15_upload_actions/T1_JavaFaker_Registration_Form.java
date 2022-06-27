@@ -34,7 +34,7 @@ public class T1_JavaFaker_Registration_Form {
 
 //    5. Enter username
         WebElement username = Driver.getDriver().findElement(By.name("username"));
-        username.sendKeys("abcde99");
+        username.sendKeys(faker.bothify("?????###"));
 
 //    6. Enter email address
         WebElement email = Driver.getDriver().findElement(By.name("email"));

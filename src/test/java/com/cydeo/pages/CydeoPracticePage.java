@@ -1,0 +1,32 @@
+package com.cydeo.pages;
+
+import com.cydeo.test.utilities.Driver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class CydeoPracticePage {
+
+    @FindBy(id = "draggable")
+    public WebElement smallCircle;
+    //POM allows us to use this above, and we don't need:
+    //WebElement smallCircle = Driver.getDriver().findElement(By.id("draggable"));
+
+    @FindBy(id = "droptarget")
+    public WebElement bigcircle;
+
+    //We also need to create constructors to avoid "Null pointer exception"
+    public CydeoPracticePage() {
+        PageFactory.initElements(Driver.getDriver(), this);
+        //PageFactory is from Selenium and allows us to initialize the element
+        // PageFactory is a selenium class that support Page Object Model,
+        // and it has method called initElements
+        // once it's called , it will locate all the element
+        // specified using @FindBy annotation with locator
+        // initElements accept 2 arguments ,
+        // WebDriver instance and Page class instance (this) means current instance of this class.
+    }
+
+
+}

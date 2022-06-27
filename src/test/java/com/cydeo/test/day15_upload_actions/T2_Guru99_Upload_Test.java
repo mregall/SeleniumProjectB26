@@ -35,7 +35,9 @@ public class T2_Guru99_Upload_Test {
         String actualResultMsg = resultMsg.getText();
         String expectedResultMsg = "1 file\nhas been successfully uploaded.";
         Thread.sleep(3000);
-        Assert.assertEquals(actualResultMsg, expectedResultMsg, "Result message verification failed.");
+        Assert.assertEquals(actualResultMsg,expectedResultMsg,"Result message verification failed!");
+
+        Driver.closeDriver();
 
 
 //    Expected: “1 file
