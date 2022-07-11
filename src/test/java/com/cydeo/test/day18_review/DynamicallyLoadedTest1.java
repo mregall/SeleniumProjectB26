@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 public class DynamicallyLoadedTest1 {
 
     @Test
+
     public void dynamically_load_page_1(){
         //1. Go to https://practice.cydeo.com/dynamic_loading/1
         Driver.getDriver().get("https://practice.cydeo.com/dynamic_loading/1");

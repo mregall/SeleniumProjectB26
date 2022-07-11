@@ -38,10 +38,12 @@ public class TestNG_Selenium {
 
         // Assert: title is  "Google"
         String actualTitle =  driver.getTitle();
-        String expectedTitle = "Google";
+        String expectedTitle = "Gooogle";
 
         // 3rd argumant is optional for failed message. It will only appear when verification is failed
         Assert.assertEquals(actualTitle,expectedTitle,"Title verification is failed!");
+
+        System.out.println("this prints or not");
 
 
     }
